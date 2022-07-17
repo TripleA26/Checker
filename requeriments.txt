@@ -1,0 +1,6 @@
+colorama
+random
+requests
+time
+sys
+prettytable
