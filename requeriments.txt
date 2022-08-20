@@ -4,3 +4,7 @@ requests
 time
 sys
 prettytable
+pypresence
+bs4
+os
+json
