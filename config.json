@@ -8,9 +8,9 @@
 
     },
     "user_length": 4,
-    "numbers": false,
-    "menu": false,
-    "cooldown": 15,
+    "numbers": true,
+    "menu": true,
+    "cooldown": 10,
     "checker": false,
     "RCP": true
 }
