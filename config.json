@@ -1,0 +1,16 @@
+{
+    "help":{
+        "user_length": "the lenght of the username",
+        "numbers": "If the username will have numbers or not - false for no",
+        "menu": "true - If the menu will be printed character by character",
+        "cooldown": "The cooldown that will have when a proxy is ratelimited",
+        "checker": "put it in true if you want to check the usernames saved in usernames.txt"
+
+    },
+    "user_length": 4,
+    "numbers": false,
+    "menu": false,
+    "cooldown": 15,
+    "checker": false,
+    "RCP": true
+}
