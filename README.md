@@ -7,5 +7,6 @@ Added RCP for discord (u can enable and disable it)
 
 Added config.json
 
+Fixed an issue in Roblox too
 
 Tiktok/Instagram soon
