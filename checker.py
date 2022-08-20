@@ -6,6 +6,7 @@ import time
 import sys
 import json
 import os
+from bs4 import BeautifulSoup
 from prettytable import PrettyTable
 from pypresence import Presence 
 table = PrettyTable()
@@ -198,8 +199,8 @@ if num1 == 1:
             inv = stat.invalid
             RPC.update(
                 large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#0026",
-                details = "Roblox Username Gen",
+                large_text = "Triple_A#2644",
+                details = "Valid Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
                 start = start,
             )
@@ -238,7 +239,7 @@ elif num1 == 2:
         print(Fore.MAGENTA + f"Now checking: {username} | With proxy: {proxy}\n")
         try:
             r = requests.head(f"https://passport.twitch.tv/usernames/{username}",
-                        headers={'Connection':'close'}, proxies=proxies, timeout=5)
+                        headers={'Connection':'close'}, proxies=proxies, timeout=30)
         except:
             print(Fore.LIGHTYELLOW_EX + "Cannot Connect with the proxy!")
             r = requests.head(f"https://passport.twitch.tv/usernames/{username}",
@@ -253,17 +254,27 @@ elif num1 == 2:
             stat.proxy_rate += 1
             time.sleep(cooldown)
         else:
-            print(Fore.LIGHTGREEN_EX + "Username its avaible\n" + Fore.RESET)
-            valid.append(f"{username}\n")
-            print("[ + ]    Username Saved")
-            stat.valid += 1
+            rn1 = "".join(random.choices(letters,k = 12))
+            url=f'https://www.twitch.tv/{rn1}'
+            response = requests.get(url, proxies=proxies, timeout=30)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            ur = f"https://www.twitch.tv/{username}"
+            response2 = requests.get(ur, proxies=proxies, timeout=30)
+            soup2 = BeautifulSoup(response2.text, 'html.parser')
+            if soup == soup2:
+                print(Fore.LIGHTGREEN_EX + "Username its avaible\n" + Fore.RESET)
+                valid.append(f"{username}\n")
+                print("[ + ]    Username Saved")
+                stat.valid += 1
+            else:
+                print(f"\n{Fore.LIGHTRED_EX}The {username} account is disabled.{Fore.RESET}\n")
         if rcp == True:
             vl = stat.valid
             inv = stat.invalid
             RPC.update(
             large_image = "1658612291010", #name of your asset
             large_text = "Triple_A#0026",
-            details = "Twitch Username Gen",
+            details = "Twitch Valid Username Gen",
             state = f"Valid - {vl} | Invalid - {inv}",
             start = start,
         )
@@ -336,8 +347,8 @@ elif num1 == 3:
             inv = stat.invalid
             RPC.update(
                 large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#0026",
-                details = "Github Username Gen",
+                large_text = "Triple_A#2644",
+                details = "Triple_A#0026 Valid Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
                 start = start,
             )
@@ -412,8 +423,8 @@ elif num1 == 4:
             inv = stat.invalid
             RPC.update(
                 large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#0026",
-                details = "Minecraft Valid Username Gen",
+                large_text = "Triple_A#2644",
+                details = "Triple_A#0026 Valid Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
                 start = start,
             )
@@ -427,7 +438,7 @@ elif num1 == 4:
         printt("You didnt gen any valid username!!")
     else:
         if checker == False:
-            with open(f"MValidUsernames{rn}.txt", "w") as f:
+            with open(f"GValidUsernames{rn}.txt", "w") as f:
                 f.write(a)
             print(Fore.LIGHTGREEN_EX + "")
             printt(f"Names Saved in GValidUsernames{rn}.txt")
@@ -435,4 +446,4 @@ elif num1 == 4:
             
 
 print(Fore.LIGHTYELLOW_EX + "")
-input("Press Enter For Exit...")
+input("SPress Enter For Exit...")
