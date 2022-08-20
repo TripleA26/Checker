@@ -199,8 +199,8 @@ if num1 == 1:
             inv = stat.invalid
             RPC.update(
                 large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#2644",
-                details = "Valid Username Gen",
+                large_text = "Triple_A#0026",
+                details = "Roblox Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
                 start = start,
             )
@@ -347,8 +347,8 @@ elif num1 == 3:
             inv = stat.invalid
             RPC.update(
                 large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#2644",
-                details = "Triple_A#0026 Valid Username Gen",
+                large_text = "Triple_A#0026",
+                details = "Github Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
                 start = start,
             )
@@ -423,8 +423,8 @@ elif num1 == 4:
             inv = stat.invalid
             RPC.update(
                 large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#2644",
-                details = "Triple_A#0026 Valid Username Gen",
+                large_text = "Triple_A#0026",
+                details = "Minecraft Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
                 start = start,
             )
@@ -446,4 +446,4 @@ elif num1 == 4:
             
 
 print(Fore.LIGHTYELLOW_EX + "")
-input("SPress Enter For Exit...")
+input("Press Enter For Exit...")
