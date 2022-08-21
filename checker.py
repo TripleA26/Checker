@@ -46,9 +46,9 @@ if rcp == True:
     print("RCP conected!")
     start = time.time()
     RPC.update(
-                large_image = "1658612291010", #name of your asset
-                large_text = "Triple_A#2644",
-                details = "Triple_A#2644 Username Gen",
+                large_image = "1658612291010",
+                large_text = "Triple_A#20026",
+                details = "Triple_A#0026 Username Gen",
                 state = f"Main Menu",
                 start = start,
             )
@@ -198,7 +198,7 @@ if num1 == 1:
             vl = stat.valid
             inv = stat.invalid
             RPC.update(
-                large_image = "1658612291010", #name of your asset
+                large_image = "1658612291010",
                 large_text = "Triple_A#0026",
                 details = "Roblox Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
@@ -254,6 +254,8 @@ elif num1 == 2:
             stat.proxy_rate += 1
             time.sleep(cooldown)
         else:
+            
+            #check is the username is banned doing a requests to the https://www.twitch.tv/{username} and checking if its the same as a unexisted one
             rn1 = "".join(random.choices(letters,k = 12))
             url=f'https://www.twitch.tv/{rn1}'
             response = requests.get(url, proxies=proxies, timeout=30)
@@ -266,13 +268,17 @@ elif num1 == 2:
                 valid.append(f"{username}\n")
                 print("[ + ]    Username Saved")
                 stat.valid += 1
+                
             else:
+                
                 print(f"\n{Fore.LIGHTRED_EX}The {username} account is disabled.{Fore.RESET}\n")
+                
         if rcp == True:
+            
             vl = stat.valid
             inv = stat.invalid
             RPC.update(
-            large_image = "1658612291010", #name of your asset
+            large_image = "1658612291010",
             large_text = "Triple_A#0026",
             details = "Twitch Valid Username Gen",
             state = f"Valid - {vl} | Invalid - {inv}",
@@ -422,7 +428,7 @@ elif num1 == 4:
             vl = stat.valid
             inv = stat.invalid
             RPC.update(
-                large_image = "1658612291010", #name of your asset
+                large_image = "1658612291010",
                 large_text = "Triple_A#0026",
                 details = "Minecraft Username Gen",
                 state = f"Valid - {vl} | Invalid - {inv}",
