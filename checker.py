@@ -444,10 +444,10 @@ elif num1 == 4:
         printt("You didnt gen any valid username!!")
     else:
         if checker == False:
-            with open(f"GValidUsernames{rn}.txt", "w") as f:
+            with open(f"MValidUsernames{rn}.txt", "w") as f:
                 f.write(a)
             print(Fore.LIGHTGREEN_EX + "")
-            printt(f"Names Saved in GValidUsernames{rn}.txt")
+            printt(f"Names Saved in MValidUsernames{rn}.txt")
 
             
 
