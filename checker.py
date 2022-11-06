@@ -1,5 +1,4 @@
 from colorama import Fore, init
-import colorama
 import random
 import requests
 import time
@@ -72,7 +71,7 @@ text = """ _______ _____  _____ _____  _      ______
    |_|  |_|  \_\_____|_|    |______|______/_/    \_\ """
    
 bad_colors = ['BLACK', 'WHITE',  'RESET', 'BLUE', 'GREEN', 'RED', 'YELLOW',]
-codes = vars(colorama.Fore)
+codes = vars(Fore)
 colors = list(codes[color] for color in codes if color not in bad_colors)
 colored_lines = [random.choice(colors) + line for line in text.split('\n')]
 print('\n'.join(colored_lines))
